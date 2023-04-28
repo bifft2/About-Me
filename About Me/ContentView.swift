@@ -24,8 +24,8 @@ struct ContentView: View {
                     showingAlert = true
                 }
                 .padding(.all, 5.0)
-                .alert("Brianna's cat's name is Forrest!", isPresented: $showingAlert) {
-                            Button("OK", role: .cancel) { }
+                .alert(isPresented: $showingAlert) {
+                    Alert(title: Text("More About Me"), message: Text("My cat's name is Forrest, and I love being cozy! Reading or playing a board game by a fireplace is one of my favorite things to do :)"), dismissButton: .default(Text("Got it!")))
                 }
                 .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color.white/*@END_MENU_TOKEN@*/)
                 .buttonBorderShape(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=shape: ButtonBorderShape@*/.capsule/*@END_MENU_TOKEN@*/)
